@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="HostelBase.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="adminEmail" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">admin@code.az</Value>
+    </Setting>
+    <Setting Name="adminPassword" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">admin123</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

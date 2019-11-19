@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="03b48d975633426b96e16b9a8cb62486" Name="Diagram1">
+        <EntityTypeShape EntityType="HostelModel.Bed" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="HostelModel.Employee" Width="1.5" PointX="1.625" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HostelModel.Guest" Width="1.5" PointX="4" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HostelModel.Income" Width="1.5" PointX="5.625" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HostelModel.Outcome" Width="1.5" PointX="4.75" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="HostelModel.Room" Width="1.5" PointX="0.75" PointY="1.125" IsExpanded="true" />
+        <AssociationConnector Association="HostelModel.FK__Bed__RoomID__3E52440B" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="HostelModel.Reservation" Width="1.5" PointX="8.25" PointY="1.875" />
+        <AssociationConnector Association="HostelModel.FK__Reservati__BedID__47DBAE45" />
+        <AssociationConnector Association="HostelModel.FK__Reservati__Emplo__44FF419A" />
+        <AssociationConnector Association="HostelModel.FK__Reservati__Guest__45F365D3" />
+        <AssociationConnector Association="HostelModel.FK__Income__Reservat__4AB81AF0" />
+        <AssociationConnector Association="HostelModel.FK__Reservati__RoomI__46E78A0C" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

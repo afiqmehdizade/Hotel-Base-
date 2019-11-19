@@ -1,0 +1,46 @@
+C:\Users\Flex Decoder\Desktop\C#Layihe\HostelBase\HostelBase\bin\Debug\HostelBase.exe.config
+C:\Users\Flex Decoder\Desktop\C#Layihe\HostelBase\HostelBase\bin\Debug\HostelBase.exe
+C:\Users\Flex Decoder\Desktop\C#Layihe\HostelBase\HostelBase\bin\Debug\HostelBase.pdb
+C:\Users\Flex Decoder\Desktop\C#Layihe\HostelBase\HostelBase\bin\Debug\EntityFramework.dll
+C:\Users\Flex Decoder\Desktop\C#Layihe\HostelBase\HostelBase\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Flex Decoder\Desktop\C#Layihe\HostelBase\HostelBase\bin\Debug\EntityFramework.xml
+C:\Users\Flex Decoder\Desktop\C#Layihe\HostelBase\HostelBase\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Flex Decoder\Desktop\C#Layihe\HostelBase\HostelBase\obj\Debug\HostelBase.csprojAssemblyReference.cache
+C:\Users\Flex Decoder\Desktop\C#Layihe\HostelBase\HostelBase\obj\Debug\HostelBase.Properties.Resources.resources
+C:\Users\Flex Decoder\Desktop\C#Layihe\HostelBase\HostelBase\obj\Debug\HostelBase.csproj.GenerateResource.cache
+C:\Users\Flex Decoder\Desktop\C#Layihe\HostelBase\HostelBase\obj\Debug\HostelBase.csproj.CoreCompileInputs.cache
+C:\Users\Flex Decoder\Desktop\C#Layihe\HostelBase\HostelBase\obj\Debug\HostelBase.csproj.CopyComplete
+C:\Users\Flex Decoder\Desktop\C#Layihe\HostelBase\HostelBase\obj\Debug\HostelBase.exe
+C:\Users\Flex Decoder\Desktop\C#Layihe\HostelBase\HostelBase\obj\Debug\HostelBase.pdb
+C:\Users\Flex Decoder\Desktop\C#Layihe\HostelBase\HostelBase\obj\Debug\HostelBase.Login.resources
+C:\Users\Flex Decoder\Desktop\C#Layihe\HostelBase\HostelBase\obj\Debug\HostelBase.registr.resources
+C:\Users\Flex Decoder\Desktop\C#Layihe\HostelBase\HostelBase\obj\Debug\HostelBase.HostelReg.resources
+C:\Users\Flex Decoder\Desktop\C#Layihe\HostelBase\HostelBase\obj\Debug\HostelBase.FormRegist.resources
+C:\Users\Flex Decoder\Desktop\C#Layihe\HostelBase\HostelBase\obj\Debug\HostelBase.GuestAdd.resources
+C:\Users\Flex Decoder\Desktop\C#Layihe\HostelBase\HostelBase\obj\Debug\HostelBase.AdminPanel.resources
+C:\Users\Flex Decoder\Desktop\C#Layihe\HostelBase\HostelBase\obj\Debug\HostelBase.AddOutcome.resources
+C:\Users\Flex Decoder\Desktop\C#Layihe\HostelBase\HostelBase\obj\Debug\HostelBase.AddRomOrBrone.resources
+C:\Users\Flex Decoder\Desktop\C#Layihe\HostelBase\HostelBase\obj\Debug\HostelBase.ForgotPass.resources
+D:\Dev\C#Layihe\HostelBase\HostelBase\bin\Debug\HostelBase.exe.config
+D:\Dev\C#Layihe\HostelBase\HostelBase\bin\Debug\HostelBase.exe
+D:\Dev\C#Layihe\HostelBase\HostelBase\bin\Debug\HostelBase.pdb
+D:\Dev\C#Layihe\HostelBase\HostelBase\bin\Debug\EntityFramework.dll
+D:\Dev\C#Layihe\HostelBase\HostelBase\bin\Debug\EntityFramework.SqlServer.dll
+D:\Dev\C#Layihe\HostelBase\HostelBase\bin\Debug\EntityFramework.xml
+D:\Dev\C#Layihe\HostelBase\HostelBase\bin\Debug\EntityFramework.SqlServer.xml
+D:\Dev\C#Layihe\HostelBase\HostelBase\obj\Debug\HostelBase.csprojAssemblyReference.cache
+D:\Dev\C#Layihe\HostelBase\HostelBase\obj\Debug\HostelBase.AddOutcome.resources
+D:\Dev\C#Layihe\HostelBase\HostelBase\obj\Debug\HostelBase.AddRomOrBrone.resources
+D:\Dev\C#Layihe\HostelBase\HostelBase\obj\Debug\HostelBase.AdminPanel.resources
+D:\Dev\C#Layihe\HostelBase\HostelBase\obj\Debug\HostelBase.ForgotPass.resources
+D:\Dev\C#Layihe\HostelBase\HostelBase\obj\Debug\HostelBase.Login.resources
+D:\Dev\C#Layihe\HostelBase\HostelBase\obj\Debug\HostelBase.FormRegist.resources
+D:\Dev\C#Layihe\HostelBase\HostelBase\obj\Debug\HostelBase.GuestAdd.resources
+D:\Dev\C#Layihe\HostelBase\HostelBase\obj\Debug\HostelBase.HostelReg.resources
+D:\Dev\C#Layihe\HostelBase\HostelBase\obj\Debug\HostelBase.Properties.Resources.resources
+D:\Dev\C#Layihe\HostelBase\HostelBase\obj\Debug\HostelBase.registr.resources
+D:\Dev\C#Layihe\HostelBase\HostelBase\obj\Debug\HostelBase.csproj.GenerateResource.cache
+D:\Dev\C#Layihe\HostelBase\HostelBase\obj\Debug\HostelBase.csproj.CoreCompileInputs.cache
+D:\Dev\C#Layihe\HostelBase\HostelBase\obj\Debug\HostelBase.csproj.CopyComplete
+D:\Dev\C#Layihe\HostelBase\HostelBase\obj\Debug\HostelBase.exe
+D:\Dev\C#Layihe\HostelBase\HostelBase\obj\Debug\HostelBase.pdb

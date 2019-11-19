@@ -1,0 +1,192 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="HostelModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Bed">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Sort" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Price" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="Number" Type="Int32" />
+    <Property Name="RoomID" Type="Int32" />
+    <Property Name="isDeleted" Type="Boolean" />
+    <NavigationProperty Name="Room" Relationship="Self.FK__Bed__RoomID__3E52440B" FromRole="Bed" ToRole="Room" />
+    <NavigationProperty Name="Reservations" Relationship="HostelModel.FK__Reservati__BedID__47DBAE45" FromRole="Bed" ToRole="Reservation" />
+  </EntityType>
+  <EntityType Name="Employee">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FullName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Password" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="isDeleted" Type="Boolean" />
+    <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Reservations" Relationship="HostelModel.FK__Reservati__Emplo__44FF419A" FromRole="Employee" ToRole="Reservation" />
+  </EntityType>
+  <EntityType Name="Guest">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdentityNum" Type="String" MaxLength="11" FixedLength="true" Unicode="true" />
+    <Property Name="Born" Type="DateTime" Precision="0" />
+    <Property Name="Telephone" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Reservations" Relationship="HostelModel.FK__Reservati__Guest__45F365D3" FromRole="Guest" ToRole="Reservation" />
+    <Property Name="Firstname" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Lastname" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Income">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Amount" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="ReservationID" Type="Int32" />
+    <NavigationProperty Name="Reservation" Relationship="HostelModel.FK__Income__Reservat__4AB81AF0" FromRole="Income" ToRole="Reservation" />
+  </EntityType>
+  <EntityType Name="Outcome">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Amount" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="Date" Type="DateTime" Precision="0" />
+    <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Room">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Number" Type="Int32" />
+    <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="isDeleted" Type="Boolean" />
+    <NavigationProperty Name="Beds" Relationship="Self.FK__Bed__RoomID__3E52440B" FromRole="Room" ToRole="Bed" />
+    <NavigationProperty Name="Reservations" Relationship="HostelModel.FK__Reservati__RoomI__46E78A0C" FromRole="Room" ToRole="Reservation" />
+  </EntityType>
+  <Association Name="FK__Bed__RoomID__3E52440B">
+    <End Role="Room" Type="Self.Room" Multiplicity="0..1" />
+    <End Role="Bed" Type="Self.Bed" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Room">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Bed">
+        <PropertyRef Name="RoomID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="HostelEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Beds" EntityType="Self.Bed" />
+    <EntitySet Name="Employees" EntityType="Self.Employee" />
+    <EntitySet Name="Guests" EntityType="Self.Guest" />
+    <EntitySet Name="Incomes" EntityType="Self.Income" />
+    <EntitySet Name="Outcomes" EntityType="Self.Outcome" />
+    <EntitySet Name="Rooms" EntityType="Self.Room" />
+    <AssociationSet Name="FK__Bed__RoomID__3E52440B" Association="Self.FK__Bed__RoomID__3E52440B">
+      <End Role="Room" EntitySet="Rooms" />
+      <End Role="Bed" EntitySet="Beds" />
+    </AssociationSet>
+    <EntitySet Name="Reservations" EntityType="HostelModel.Reservation" />
+    <AssociationSet Name="FK__Reservati__BedID__47DBAE45" Association="HostelModel.FK__Reservati__BedID__47DBAE45">
+      <End Role="Bed" EntitySet="Beds" />
+      <End Role="Reservation" EntitySet="Reservations" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Reservati__Emplo__44FF419A" Association="HostelModel.FK__Reservati__Emplo__44FF419A">
+      <End Role="Employee" EntitySet="Employees" />
+      <End Role="Reservation" EntitySet="Reservations" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Reservati__Guest__45F365D3" Association="HostelModel.FK__Reservati__Guest__45F365D3">
+      <End Role="Guest" EntitySet="Guests" />
+      <End Role="Reservation" EntitySet="Reservations" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Income__Reservat__4AB81AF0" Association="HostelModel.FK__Income__Reservat__4AB81AF0">
+      <End Role="Reservation" EntitySet="Reservations" />
+      <End Role="Income" EntitySet="Incomes" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Reservati__RoomI__46E78A0C" Association="HostelModel.FK__Reservati__RoomI__46E78A0C">
+      <End Role="Room" EntitySet="Rooms" />
+      <End Role="Reservation" EntitySet="Reservations" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Reservation">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EmployeeID" Type="Int32" />
+    <Property Name="GuestID" Type="Int32" />
+    <Property Name="RoomID" Type="Int32" />
+    <Property Name="BedID" Type="Int32" />
+    <Property Name="StartTime" Type="DateTime" Precision="0" />
+    <Property Name="EndTime" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="Bed" Relationship="HostelModel.FK__Reservati__BedID__47DBAE45" FromRole="Reservation" ToRole="Bed" />
+    <NavigationProperty Name="Employee" Relationship="HostelModel.FK__Reservati__Emplo__44FF419A" FromRole="Reservation" ToRole="Employee" />
+    <NavigationProperty Name="Guest" Relationship="HostelModel.FK__Reservati__Guest__45F365D3" FromRole="Reservation" ToRole="Guest" />
+    <NavigationProperty Name="Incomes" Relationship="HostelModel.FK__Income__Reservat__4AB81AF0" FromRole="Reservation" ToRole="Income" />
+    <NavigationProperty Name="Room" Relationship="HostelModel.FK__Reservati__RoomI__46E78A0C" FromRole="Reservation" ToRole="Room" />
+    <Property Name="TotalAmount" Type="Decimal" Precision="10" Scale="2" />
+  </EntityType>
+  <Association Name="FK__Reservati__BedID__47DBAE45">
+    <End Type="HostelModel.Bed" Role="Bed" Multiplicity="0..1" />
+    <End Type="HostelModel.Reservation" Role="Reservation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Bed">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Reservation">
+        <PropertyRef Name="BedID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Reservati__Emplo__44FF419A">
+    <End Type="HostelModel.Employee" Role="Employee" Multiplicity="0..1" />
+    <End Type="HostelModel.Reservation" Role="Reservation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employee">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Reservation">
+        <PropertyRef Name="EmployeeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Reservati__Guest__45F365D3">
+    <End Type="HostelModel.Guest" Role="Guest" Multiplicity="0..1" />
+    <End Type="HostelModel.Reservation" Role="Reservation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Guest">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Reservation">
+        <PropertyRef Name="GuestID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Income__Reservat__4AB81AF0">
+    <End Type="HostelModel.Reservation" Role="Reservation" Multiplicity="0..1" />
+    <End Type="HostelModel.Income" Role="Income" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Reservation">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Income">
+        <PropertyRef Name="ReservationID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Reservati__RoomI__46E78A0C">
+    <End Type="HostelModel.Room" Role="Room" Multiplicity="0..1" />
+    <End Type="HostelModel.Reservation" Role="Reservation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Room">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Reservation">
+        <PropertyRef Name="RoomID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>
